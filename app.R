@@ -1184,11 +1184,11 @@ server <- function(input, output, session) {
                              if(is.finite(hr)) sprintf("%.4f", hr) else "\u2014",
                              paste0("ln(HR) = ", if(is.finite(hr)) sprintf("%.4f", log(hr)) else "\u2014"),
                              hrc),
-                    kpi_card(if(rv$arms==1) "H\u2080 Median (m\u2080)" else "Control Median (m\u1D9C)",
+                    kpi_card(if(rv$arms==1) "H\u2080 Median" else "Control Median (m\u1D9C)",
                              if(is.finite(m0v)) paste0(sprintf("%.2f", m0v), " ", U()) else "\u2014",
                              paste0("\u03bb\u2080 = ", if(is.finite(l0())) sprintf("%.4f", l0()) else "\u2014", " ", lU()),
                              GY),
-                    kpi_card(if(rv$arms==1) "H\u2081 Median (m\u2081)" else "Treatment Median (m\u209c)",
+                    kpi_card(if(rv$arms==1) "H\u2081 Median" else "Treatment Median (m\u209c)",
                              if(is.finite(m1v)) paste0(sprintf("%.2f", m1v), " ", U()) else "\u2014",
                              paste0("\u03bb\u2081 = ", if(is.finite(l1())) sprintf("%.4f", l1()) else "\u2014", " ", lU()),
                              GY)
